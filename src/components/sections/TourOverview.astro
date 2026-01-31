@@ -1,0 +1,51 @@
+---
+import SectionHeading from '../parts/SectionHeading.astro';
+
+const images = [
+  {
+    src: 'https://placehold.co/800x500/0ea5e9/white?text=Ocean',
+    alt: '透明度抜群の海',
+  },
+  {
+    src: 'https://placehold.co/800x500/06b6d4/white?text=Islands',
+    alt: '美しい島々',
+  },
+  {
+    src: 'https://placehold.co/800x500/0891b2/white?text=Experience',
+    alt: 'ツアー体験',
+  },
+  {
+    src: 'https://placehold.co/800x500/0e7490/white?text=Drone',
+    alt: 'ドローン空撮',
+  },
+];
+---
+
+<section id="tour-overview" class="bg-white py-20">
+  <div class="mx-auto max-w-6xl px-4">
+    <SectionHeading subtitle="セブ島の魅力を丸ごと体験する少人数制ツアー">
+      ツアー概要
+    </SectionHeading>
+
+    <p class="mx-auto mb-12 max-w-3xl text-center text-gray-600">
+      透明度抜群の海でのシュノーケリング、美しい島々を巡るアイランドホッピング、
+      そしてプロによるドローン空撮。セブ島の魅力を1日で満喫できる、
+      日本語ガイド付きの少人数制ツアーです。
+    </p>
+
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+      {
+        images.map((img) => (
+          <div class="aspect-[4/3] overflow-hidden rounded-xl bg-gray-200">
+            <img
+              src={img.src}
+              alt={img.alt}
+              class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
