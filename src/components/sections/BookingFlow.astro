@@ -1,0 +1,32 @@
+---
+import SectionHeading from '../parts/SectionHeading.astro';
+import StepItem from '../parts/StepItem.astro';
+---
+
+<section class="bg-white py-20">
+  <div class="mx-auto max-w-3xl px-4">
+    <SectionHeading subtitle="予約からツアー当日まで、かんたん4ステップ">
+      ご予約の流れ
+    </SectionHeading>
+
+    <div class="flex flex-col gap-8">
+      <StepItem step={1} title="空いている日程を選択">
+        <p>予約ページから、ご希望の日程を選択してください。</p>
+      </StepItem>
+
+      <StepItem step={2} title="クレジットカードで支払い">
+        <p>オンラインで安全にお支払い。予約が即座に確定します。</p>
+      </StepItem>
+
+      <StepItem step={3} title="予約確認">
+        <p>
+          確認メールが届きます。持ち物や集合場所など、当日の詳細をご案内します。
+        </p>
+      </StepItem>
+
+      <StepItem step={4} title="ツアー当日">
+        <p>ホテルまでお迎えに上がります。あとは楽しむだけ！</p>
+      </StepItem>
+    </div>
+  </div>
+</section>
