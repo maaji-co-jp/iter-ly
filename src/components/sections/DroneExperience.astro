@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import SectionHeading from '../parts/SectionHeading.astro';
 ---
 
@@ -13,12 +14,13 @@ import SectionHeading from '../parts/SectionHeading.astro';
 
     <div class="grid items-center gap-10 md:grid-cols-2">
       <div class="aspect-video overflow-hidden rounded-2xl bg-gray-800">
-        <img
-          src="https://placehold.co/800x450/0891b2/white?text=Drone+Aerial+Shot"
-          alt="ドローン空撮サンプル"
+        <video
+          src="/iter-ly/images/drone.m4v"
           class="h-full w-full object-cover"
-          loading="lazy"
-        />
+          autoplay
+          muted
+          loop
+          playsinline></video>
       </div>
 
       <div class="text-gray-300">
@@ -35,11 +37,11 @@ import SectionHeading from '../parts/SectionHeading.astro';
 
         <div class="grid grid-cols-2 gap-4">
           <div class="rounded-xl bg-gray-800 p-4 text-center">
-            <p class="text-3xl">📸</p>
+            <Icon name="lucide:camera" class="mx-auto h-8 w-8 text-cyan-400" />
             <p class="mt-2 text-sm font-semibold text-white">空撮写真</p>
           </div>
           <div class="rounded-xl bg-gray-800 p-4 text-center">
-            <p class="text-3xl">🎬</p>
+            <Icon name="lucide:video" class="mx-auto h-8 w-8 text-cyan-400" />
             <p class="mt-2 text-sm font-semibold text-white">空撮映像</p>
           </div>
         </div>
