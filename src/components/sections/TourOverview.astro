@@ -1,48 +1,83 @@
 ---
 import SectionHeading from '../parts/SectionHeading.astro';
 
-const images = [
+const items = [
   {
-    src: 'https://placehold.co/800x500/0ea5e9/white?text=Ocean',
-    alt: '透明度抜群の海',
+    src: '/iter-ly/images/oslob-whaleshark.png',
+    alt: 'オスロブ ジンベイザメ',
+    title: 'オスロブ｜ジンベイザメ遊泳',
+    text: '世界的にも珍しい、ジンベイザメと一緒に泳げるスポット。間近で見る巨大なジンベイザメは圧巻の迫力です。体長6〜8メートルにもなるジンベイザメが、手の届きそうな距離を悠然と泳ぐ姿は一生忘れられない体験になるはずです。',
   },
   {
-    src: 'https://placehold.co/800x500/06b6d4/white?text=Islands',
-    alt: '美しい島々',
+    src: '/iter-ly/images/sumilon-island.png',
+    alt: 'スミロン島',
+    title: 'スミロン島｜シュノーケリング',
+    text: 'エメラルドグリーンの海と白い砂浜が広がるスミロン島。透明度抜群の海でシュノーケリングを満喫できます。色とりどりの熱帯魚やサンゴ礁が広がる海中世界は、まるで天然の水族館。真っ白なサンドバーでの記念撮影も人気です。',
   },
   {
-    src: 'https://placehold.co/800x500/0891b2/white?text=Experience',
-    alt: 'ツアー体験',
+    src: '/iter-ly/images/tumalog-falls.png',
+    alt: 'ツマログ滝',
+    title: 'ツマログ滝｜絶景スポット',
+    text: 'マイナスイオンあふれる神秘的な滝。美しい水のカーテンを背景に、フォトジェニックな1枚を撮影できます。高さ約20メートルから流れ落ちる水しぶきは、海遊びの後のクールダウンにもぴったり。自然の中でリフレッシュできる癒しのスポットです。',
   },
   {
-    src: 'https://placehold.co/800x500/0e7490/white?text=Drone',
+    src: '/iter-ly/images/drone.m4v',
     alt: 'ドローン空撮',
+    video: true,
+    title: 'ドローン空撮｜特別な映像',
+    text: 'プロのオペレーターがツアー中の様子を空から撮影。上空から見るセブの海は、地上では味わえない絶景です。撮影した空撮動画・写真はツアー後にデータでお渡し。SNSにもそのまま使える、旅の特別な思い出になります。',
   },
 ];
 ---
 
 <section id="tour-overview" class="bg-white py-20">
   <div class="mx-auto max-w-6xl px-4">
-    <SectionHeading subtitle="セブ島の魅力を丸ごと体験する少人数制ツアー">
-      ツアー概要
+    <SectionHeading subtitle="オスロブ・スミロン島・ツマログ滝を1日で">
+      ツアー内容
     </SectionHeading>
 
-    <p class="mx-auto mb-12 max-w-3xl text-center text-gray-600">
-      透明度抜群の海でのシュノーケリング、美しい島々を巡るアイランドホッピング、
-      そしてプロによるドローン空撮。セブ島の魅力を1日で満喫できる、
-      日本語ガイド付きの少人数制ツアーです。
+    <p class="mx-auto mb-16 max-w-3xl text-center text-gray-600">
+      ジンベイザメとの遊泳、エメラルドグリーンの海が広がるスミロン島でのシュノーケリング、ツマログ滝での絶景体験。ツアー中はプロによるドローン空撮も行い、特別な映像をお届けします。iter-ly
+      が厳選した現地業者が、日本語ガイド付きでご案内します。
     </p>
 
-    <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+    <div class="space-y-16">
       {
-        images.map((img) => (
-          <div class="aspect-[4/3] overflow-hidden rounded-xl bg-gray-200">
-            <img
-              src={img.src}
-              alt={img.alt}
-              class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-              loading="lazy"
-            />
+        items.map((item, i) => (
+          <div
+            class:list={[
+              'flex flex-col items-center gap-8 md:flex-row md:gap-12',
+              i % 2 !== 0 && 'md:flex-row-reverse',
+            ]}
+          >
+            <div class="w-full md:w-1/2">
+              <div class="aspect-[16/9] overflow-hidden rounded-xl bg-gray-200">
+                {item.video ? (
+                  <video
+                    src={item.src}
+                    class="h-full w-full object-cover"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  />
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                )}
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <h3 class="mb-3 text-xl font-bold text-sky-600">{item.title}</h3>
+              <p class="text-gray-600">{item.text}</p>
+              {item.note && (
+                <p class="mt-2 text-sm text-gray-400">{item.note}</p>
+              )}
+            </div>
           </div>
         ))
       }
