@@ -1,12 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/sections/Hero.astro';
+import AboutService from '../components/sections/AboutService.astro';
+import TourOverview from '../components/sections/TourOverview.astro';
+import Schedule from '../components/sections/Schedule.astro';
+import Pricing from '../components/sections/Pricing.astro';
+import ComparisonTable from '../components/sections/ComparisonTable.astro';
+import DroneExperience from '../components/sections/DroneExperience.astro';
+import RecommendFor from '../components/sections/RecommendFor.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import Safety from '../components/sections/Safety.astro';
+import WhyAffordable from '../components/sections/WhyAffordable.astro';
+import BookingFlow from '../components/sections/BookingFlow.astro';
+import Faq from '../components/sections/Faq.astro';
+import FooterCta from '../components/sections/FooterCta.astro';
 ---
 
-<Layout title="iter-ly">
-  <main class="flex min-h-screen items-center justify-center bg-gray-50">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold text-gray-900">iter-ly</h1>
-      <p class="mt-4 text-lg text-gray-600">Coming Soon</p>
-    </div>
-  </main>
+<Layout title="iter-ly | セブ島ツアー">
+  <Hero />
+  <AboutService />
+  <TourOverview />
+  <Schedule />
+  <Pricing />
+  <DroneExperience />
+  <ComparisonTable />
+  <RecommendFor />
+  <Testimonials />
+  <Safety />
+  <WhyAffordable />
+  <BookingFlow />
+  <Faq />
+  <FooterCta />
+  <footer class="bg-gray-900 py-6 text-center text-sm text-gray-400">
+    <p>&copy; 2026 Maaji inc.</p>
+  </footer>
 </Layout>

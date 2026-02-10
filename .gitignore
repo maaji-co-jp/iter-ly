@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # local files
 *.local.*
+
+# MCP / Playwright
+.mcp.json
+.playwright-mcp/

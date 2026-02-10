@@ -1,0 +1,56 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeading from '../parts/SectionHeading.astro';
+---
+
+<section class="bg-gray-900 py-20">
+  <div class="mx-auto max-w-6xl px-4">
+    <SectionHeading
+      subtitle="プロのオペレーターが空から撮影する、特別な思い出"
+      class="[&_h2]:text-white [&_p]:text-gray-300"
+    >
+      <span class="text-white">ドローン空撮付き</span>
+    </SectionHeading>
+
+    <div class="grid items-center gap-10 md:grid-cols-2">
+      <div class="aspect-video overflow-hidden rounded-2xl bg-gray-800">
+        <video
+          src="/iter-ly/images/drone.m4v"
+          class="h-full w-full object-cover"
+          autoplay
+          muted
+          loop
+          playsinline></video>
+      </div>
+
+      <div class="text-gray-300">
+        <h3 class="mb-4 text-2xl font-bold text-white">
+          空からの絶景を、あなただけに
+        </h3>
+        <p class="mb-4">
+          ツアー中にドローンで撮影した空撮映像・写真を無料でプレゼントします。
+          上空から見るセブの海は、地上からは見られない圧巻の美しさです。
+        </p>
+        <p class="mb-6">
+          SNS映え間違いなしの特別な映像を、旅の思い出としてお持ち帰りください。
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-xl bg-gray-800 p-4 text-center">
+            <Icon name="lucide:camera" class="mx-auto h-8 w-8 text-cyan-400" />
+            <p class="mt-2 text-sm font-semibold text-white">空撮写真</p>
+          </div>
+          <div class="rounded-xl bg-gray-800 p-4 text-center">
+            <Icon name="lucide:video" class="mx-auto h-8 w-8 text-cyan-400" />
+            <p class="mt-2 text-sm font-semibold text-white">空撮映像</p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-sm text-gray-500">
+          ※ 天候や風の状況により、ドローン撮影ができない場合があります。
+          その場合は地上からの撮影で対応いたします。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

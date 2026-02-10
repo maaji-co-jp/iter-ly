@@ -1,0 +1,68 @@
+---
+import SectionHeading from '../parts/SectionHeading.astro';
+
+const items = [
+  {
+    src: '/iter-ly/images/oslob-whaleshark.png',
+    alt: 'オスロブ ジンベイザメ',
+    title: 'オスロブ｜ジンベイザメ遊泳',
+    text: '世界的にも珍しい、ジンベイザメと一緒に泳げるスポット。間近で見る巨大なジンベイザメは圧巻の迫力です。体長6〜8メートルにもなるジンベイザメが、手の届きそうな距離を悠然と泳ぐ姿は一生忘れられない体験になるはずです。',
+  },
+  {
+    src: '/iter-ly/images/sumilon-island.png',
+    alt: 'スミロン島',
+    title: 'スミロン島｜シュノーケリング',
+    text: 'エメラルドグリーンの海と白い砂浜が広がるスミロン島。透明度抜群の海でシュノーケリングを満喫できます。色とりどりの熱帯魚やサンゴ礁が広がる海中世界は、まるで天然の水族館。真っ白なサンドバーでの記念撮影も人気です。',
+  },
+  {
+    src: '/iter-ly/images/tumalog-falls.png',
+    alt: 'ツマログ滝',
+    title: 'ツマログ滝｜絶景スポット',
+    text: 'マイナスイオンあふれる神秘的な滝。美しい水のカーテンを背景に、フォトジェニックな1枚を撮影できます。高さ約20メートルから流れ落ちる水しぶきは、海遊びの後のクールダウンにもぴったり。自然の中でリフレッシュできる癒しのスポットです。',
+  },
+];
+---
+
+<section id="tour-overview" class="bg-white py-20">
+  <div class="mx-auto max-w-6xl px-4">
+    <SectionHeading subtitle="オスロブ・スミロン島・ツマログ滝を1日で">
+      ツアー内容
+    </SectionHeading>
+
+    <p class="mx-auto mb-16 max-w-3xl text-center text-gray-600">
+      ジンベイザメとの遊泳、エメラルドグリーンの海が広がるスミロン島でのシュノーケリング、ツマログ滝での絶景体験。ツアー中はプロによるドローン空撮も行い、特別な映像をお届けします。iter-ly
+      が厳選した現地業者が、日本語ガイド付きでご案内します。
+    </p>
+
+    <div class="space-y-16">
+      {
+        items.map((item, i) => (
+          <div
+            class:list={[
+              'flex flex-col items-center gap-8 md:flex-row md:gap-12',
+              i % 2 !== 0 && 'md:flex-row-reverse',
+            ]}
+          >
+            <div class="w-full md:w-1/2">
+              <div class="aspect-[16/9] overflow-hidden rounded-xl bg-gray-200">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <h3 class="mb-3 text-xl font-bold text-sky-600">{item.title}</h3>
+              <p class="text-gray-600">{item.text}</p>
+              {item.note && (
+                <p class="mt-2 text-sm text-gray-400">{item.note}</p>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

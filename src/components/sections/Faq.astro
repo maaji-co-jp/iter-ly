@@ -1,0 +1,44 @@
+---
+import SectionHeading from '../parts/SectionHeading.astro';
+import AccordionItem from '../parts/AccordionItem.astro';
+---
+
+<section id="faq" class="bg-gray-50 py-20">
+  <div class="mx-auto max-w-3xl px-4">
+    <SectionHeading subtitle="お客様からよくいただくご質問">
+      よくある質問
+    </SectionHeading>
+
+    <div>
+      <AccordionItem question="英語が話せなくても大丈夫ですか？">
+        <p>
+          はい、日本語対応のガイドが同行しますので、英語が話せなくてもまったく問題ありません。ただし、事前の集合場所・時間のやりとり、当日の合流までのやりとりはLINEを通じて英語でお願いしております。
+        </p>
+      </AccordionItem>
+
+      <AccordionItem question="表示料金以外に追加費用はかかりますか？">
+        <p>
+          当日のランチ代は含まれておりませんのでご了承ください。それ以外の、エントランス費用・シュノーケリング器具・ホテル送迎・ドローン空撮・日本語ガイドなど、すべて表示料金に含まれています。
+        </p>
+      </AccordionItem>
+
+      <AccordionItem question="ホテル送迎はどのエリアまで対応していますか？">
+        <p>
+          マクタン島・セブシティエリアのホテルであれば送迎可能です。それ以外のエリアにご宿泊の場合は、お申し込み時にご相談ください。
+        </p>
+      </AccordionItem>
+
+      <AccordionItem question="天候が悪い場合はどうなりますか？">
+        <p>
+          安全を最優先に判断し、催行が困難な場合はガイドより前日までにご連絡いたします。中止の場合は全額返金、または日程変更で対応いたします。ドローン撮影ができない場合は地上からの撮影で対応いたします。
+        </p>
+      </AccordionItem>
+
+      <AccordionItem question="キャンセルについて教えてください">
+        <p>
+          3日前までのキャンセルは全額返金いたします。2日前〜前日は50%、当日キャンセルは返金不可となります。天候不良による中止の場合は全額返金いたします。
+        </p>
+      </AccordionItem>
+    </div>
+  </div>
+</section>

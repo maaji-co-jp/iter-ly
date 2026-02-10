@@ -1,0 +1,82 @@
+---
+import SectionHeading from '../parts/SectionHeading.astro';
+---
+
+<section class="bg-gray-50 py-20">
+  <div class="mx-auto max-w-3xl px-4">
+    <SectionHeading subtitle="旅行会社を通さないから、この価格を実現できました">
+      安さの理由
+    </SectionHeading>
+
+    <div class="rounded-2xl bg-white p-8 shadow-md">
+      <div class="space-y-8">
+        <!-- 従来の仕組み -->
+        <div>
+          <p class="mb-3 text-sm font-semibold text-gray-400">
+            従来の旅行会社経由
+          </p>
+          <div
+            class="flex items-center justify-center gap-2 text-sm md:gap-4 md:text-base"
+          >
+            <span
+              class="rounded-lg bg-gray-100 px-3 py-2 font-medium text-gray-700 md:px-4"
+            >
+              お客様
+            </span>
+            <span class="text-gray-300">→</span>
+            <span
+              class="rounded-lg bg-red-50 px-3 py-2 font-medium text-red-500 md:px-4"
+            >
+              旅行会社
+              <span class="block text-xs text-red-400">中間マージン</span>
+            </span>
+            <span class="text-gray-300">→</span>
+            <span
+              class="rounded-lg bg-gray-100 px-3 py-2 font-medium text-gray-700 md:px-4"
+            >
+              現地業者
+            </span>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-100"></div>
+
+        <!-- iter-ly の仕組み -->
+        <div>
+          <p class="mb-3 text-sm font-semibold text-cyan-600">
+            iter-ly の直接予約
+          </p>
+          <div
+            class="flex items-center justify-center gap-2 text-sm md:gap-4 md:text-base"
+          >
+            <span
+              class="rounded-lg bg-gray-100 px-3 py-2 font-medium text-gray-700 md:px-4"
+            >
+              お客様
+            </span>
+            <span class="text-cyan-400">→</span>
+            <span
+              class="rounded-lg bg-cyan-50 px-3 py-2 font-bold text-cyan-700 md:px-4"
+            >
+              iter-ly
+              <span class="block text-xs font-normal text-cyan-500"
+                >マージン最小</span
+              >
+            </span>
+            <span class="text-cyan-400">→</span>
+            <span
+              class="rounded-lg bg-gray-100 px-3 py-2 font-medium text-gray-700 md:px-4"
+            >
+              現地業者
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-8 text-center text-sm text-gray-500">
+        お客様と現地業者を直接つなぐことで、旅行会社の中間マージンを削減。<br />
+        その分を、お客様への価格に還元しています。
+      </p>
+    </div>
+  </div>
+</section>
