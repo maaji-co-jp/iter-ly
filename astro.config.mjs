@@ -7,8 +7,7 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://maaji-co-jp.github.io',
-  base: '/iter-ly',
+  site: 'https://www.iter-ly.com',
 
   vite: {
     plugins: [tailwindcss()],
