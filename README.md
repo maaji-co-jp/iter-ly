@@ -33,14 +33,14 @@ http://localhost:4321 で開発サーバーが起動します。
 
 ### コマンド一覧
 
-| コマンド | 説明 |
-|:--|:--|
-| `npm run dev` | 開発サーバーを起動 |
-| `npm run build` | 本番用ビルド (`./dist/`) |
-| `npm run preview` | ビルド結果をローカルでプレビュー |
-| `npm run lint` | ESLint + Prettier のチェック |
-| `npm run lint:fix` | ESLint + Prettier の自動修正 |
-| `npm run format` | Prettier でフォーマット |
+| コマンド           | 説明                             |
+| :----------------- | :------------------------------- |
+| `npm run dev`      | 開発サーバーを起動               |
+| `npm run build`    | 本番用ビルド (`./dist/`)         |
+| `npm run preview`  | ビルド結果をローカルでプレビュー |
+| `npm run lint`     | ESLint + Prettier のチェック     |
+| `npm run lint:fix` | ESLint + Prettier の自動修正     |
+| `npm run format`   | Prettier でフォーマット          |
 
 ## ディレクトリ構成
 
